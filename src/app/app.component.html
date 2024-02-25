@@ -2,14 +2,19 @@
   <div class="lgn grid-item display-content-center">
     <div class="grid-container">
       <div class="grid-item responsive-width">
-        <p class="responsive-width">{{questionAndBtnStatus.question}}</p>
+        <p *ngIf="showResponse == true" class="responsive-width">{{questionAndBtnStatus.response}}</p>
+        <p *ngIf="showResponse == false"class="responsive-width">{{questionAndBtnStatus.question}}</p>
       </div>
       <div class="grid-container-btn display-content-center responsive-width">
         <div class="grid-item display-content-center">
-          <button class="btn-yes" (click)="getQuestion()">{{questionAndBtnStatus.btn}}</button>
+          <button class="btn-yes" (click)="getQuestion()" *ngIf="showResponse == false">{{questionAndBtnStatus.btn}}</button>
         </div>
-        <div class="grid-item display-content-center" *ngIf="questionAndBtnStatus.btn == 'Yes'">
+        <div class="grid-item display-content-center" *ngIf="questionAndBtnStatus.btn == 'Yes' && showResponse == false">
           <button class="btn-no">No</button>
+        </div>
+        <div class="grid-item display-content-center" *ngIf="showResponse == true">
+          <img src="../assets/gif/love-you.gif"/>
+          <img src="../assets/gif/couple-ilu.gif"/>
         </div>
       </div>
     </div>
