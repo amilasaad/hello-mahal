@@ -1,0 +1,97 @@
+.lgn {
+    background-color: #dbe1e318;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    height: 40vh;
+    width: 40vw;
+}
+
+.display-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-yes {
+    height: 7vh;
+    width: 15vw;
+    border-radius: 15px;
+    background-color: rgba(255, 0, 0, 0.568);
+    border: none;
+
+    font-family: 'Love Light', cursive;
+    font-size: 1.5em;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(211, 1, 1, 0.568);
+    }
+}
+
+.btn-no {
+    height: 7vh;
+    width: 15vw;
+    font-size: 1.5em;
+    border-radius: 15px;
+    background-color: rgba(255, 0, 0, 0.568);
+    border: none;
+
+    font-family: 'Love Light', cursive;
+    color: white;
+    font-size: 1.5em;
+
+    &:hover {
+        display: none;
+    }
+}
+
+p {
+    font-family: 'Love Light', cursive;
+    color: rgba(247, 247, 247, 0.863);
+    font-size: 1.9em;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-container-btn {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.music {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .btn-yes, .btn-no {
+        width: 40vw;
+    }
+
+    .lgn {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        width: 80vw !important;
+    }
+
+    .responsive-width {
+        width: 80vw !important;
+    }
+
+    .grid-item {
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+    }
+}
