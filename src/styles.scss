@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+// 040D12
+// 183D3D
+// 5C8374
+// 93B1A6
+
+body {
+    height: 100vh;
+    width: 100vw;
+    // overflow: hidden;
+}
+
+.mContent {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background-image: url(./assets/images/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

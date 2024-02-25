@@ -1,0 +1,29 @@
+<div class="mContent grid-container display-content-center">
+  <div class="lgn grid-item display-content-center">
+    <div class="grid-container">
+      <div class="grid-item responsive-width">
+        <p class="responsive-width">{{questionAndBtnStatus.question}}</p>
+      </div>
+      <div class="grid-container-btn display-content-center responsive-width">
+        <div class="grid-item display-content-center">
+          <button class="btn-yes" (click)="getQuestion()">{{questionAndBtnStatus.btn}}</button>
+        </div>
+        <div class="grid-item display-content-center" *ngIf="questionAndBtnStatus.btn == 'Yes'">
+          <button class="btn-no">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="music grid-item display-content-center responsive-width">
+    <div class="grid-container">
+      <div class="grid-item responsive-width">
+        <audio controls autoplay>
+          <source class="responsive-width" src="{{ getMusic }}" type="audio/mp3">
+        </audio>
+      </div>
+      <div class="grid-item responsive-width">
+        <p>Developed by: Hiro</p>
+      </div>
+    </div>
+  </div>
+</div>
